@@ -95,26 +95,18 @@
         <div class="container">
             <form>
                 <div class="form-group">
-                    <label for="InputUsername">Username</label>
-                    <input type="text" class="form-control" id="InputUsername">
-                </div>
-                <div class="form-group">
                     <label for="InputEmail1">Email address</label>
                     <input type="email" class="form-control" id="InputEmail1" aria-describedby="emailHelp">
-                    <small id="emailHelp" class="form-text text-muted">
-                        <i class="fas fa-lock"></i>
-                        We'll never share your email with anyone.
-                    </small>
                 </div>
                 <div class="form-group">
-                    <label for="InputPassword2">Password</label>
-                    <input type="password" class="form-control" id="Password2">
+                    <label for="InputNewPassword">New Password</label>
+                    <input type="password" class="form-control" id="InputNewPassword">
                 </div>
             </form>
         </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary">Sign up</button>
+        <button type="button" class="btn btn-primary">Reset Password</button>
       </div>
     </div>
   </div>
