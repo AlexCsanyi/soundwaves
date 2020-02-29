@@ -1,4 +1,7 @@
 $(document).ready(function() {
+  // Hide spinner by default
+  $("#spinner").hide();
+
   $("#verify_ajax").on("click", function() {
     // validate username
     var name = $("#user_name").val();
@@ -14,6 +17,35 @@ $(document).ready(function() {
       return false;
     } else {
       $("#name_error").html("");
+    }
+
+    // validate email
+    var email = $("#user_email").val();
+    var reg_email = /^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+
+    if (email == "") {
+      $("#email_error").html("Email is required");
+      $("#email_error").css("color", "red");
+      return false;
+    } else if (!email.match(reg_email)) {
+      $("#email_error").html("Enter valid email");
+      $("#email_error").css("color", "red");
+      return false;
+    } else {
+      $("#email_error").html("");
+    }
+
+    // validate password
+    var password = $("#user_password").val();
+
+    if (password == "") {
+      $("#password_error").html("Password is required");
+      $("#password_error").css("color", "red");
+      return false;
+    } else {
+      $("#password_error").html("");
+      $("#verify_ajax").hide();
+      $("#spinner").show();
     }
 
     $.ajax({

@@ -61,22 +61,28 @@
                     <span id="name_error"></span>
                 </div>
                 <div class="form-group">
-                    <label for="InputEmail1">Email address</label>
-                    <input required type="email" class="form-control" id="InputEmail1" aria-describedby="emailHelp">
+                    <label for="user_email">Email address</label>
+                    <input required type="email" class="form-control" name="user_email" id="user_email" aria-describedby="emailHelp">
+                    <span id="email_error"></span>
                     <small id="emailHelp" class="form-text text-muted">
                         <i class="fas fa-lock"></i>
                         We'll never share your email with anyone.
                     </small>
                 </div>
                 <div class="form-group">
-                    <label for="InputPassword2">Password</label>
-                    <input required type="password" class="form-control" id="Password2">
+                    <label for="user_password">Password</label>
+                    <input required type="password" class="form-control" name="user_password" id="user_password">
+                    <span id="password_error"></span>
                 </div>
             </form>
         </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-primary" id="verify_ajax">Sign up</button>
+        <button class="btn btn-success" type="button" disabled id="spinner">
+            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+            Please wait...
+        </button>
       </div>
     </div>
   </div>
