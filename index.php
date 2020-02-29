@@ -56,12 +56,13 @@
         <div class="container">
             <form>
                 <div class="form-group">
-                    <label for="InputUsername">Username</label>
-                    <input type="text" class="form-control" id="InputUsername">
+                    <label for="user_name">Username</label>
+                    <input required type="text" class="form-control" name="user_name" id="user_name">
+                    <span id="name_error"></span>
                 </div>
                 <div class="form-group">
                     <label for="InputEmail1">Email address</label>
-                    <input type="email" class="form-control" id="InputEmail1" aria-describedby="emailHelp">
+                    <input required type="email" class="form-control" id="InputEmail1" aria-describedby="emailHelp">
                     <small id="emailHelp" class="form-text text-muted">
                         <i class="fas fa-lock"></i>
                         We'll never share your email with anyone.
@@ -69,13 +70,13 @@
                 </div>
                 <div class="form-group">
                     <label for="InputPassword2">Password</label>
-                    <input type="password" class="form-control" id="Password2">
+                    <input required type="password" class="form-control" id="Password2">
                 </div>
             </form>
         </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary">Sign up</button>
+        <button type="button" class="btn btn-primary" id="verify_ajax">Sign up</button>
       </div>
     </div>
   </div>
@@ -95,8 +96,8 @@
         <div class="container">
             <form>
                 <div class="form-group">
-                    <label for="InputEmail1">Email address</label>
-                    <input type="email" class="form-control" id="InputEmail1" aria-describedby="emailHelp">
+                    <label for="InputEmail2">Email address</label>
+                    <input type="email" class="form-control" id="InputEmail2" aria-describedby="emailHelp">
                 </div>
                 <div class="form-group">
                     <label for="InputNewPassword">New Password</label>
