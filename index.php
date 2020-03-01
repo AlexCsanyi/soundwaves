@@ -54,7 +54,7 @@
       </div>
       <div class="modal-body">
         <div class="container">
-            <form>
+            <form id="register_form">
                 <div class="form-group">
                     <label for="user_name">Username</label>
                     <input required type="text" class="form-control" name="user_name" id="user_name">

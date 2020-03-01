@@ -51,6 +51,7 @@ $(document).ready(function() {
     $.ajax({
       type: "POST",
       url: "webservices/register.php",
+      data: $("#register_form").serialize(),
       success: function(result) {
         alert(result);
       }

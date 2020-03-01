@@ -1,5 +1,9 @@
 <?php 
 
-    echo "You have successfully registered"
+    $user = $_POST["user_name"];
+    $email = $_POST["user_email"];
+    $password = $_POST["user_password"];
+
+    echo $user
 
 ?>
