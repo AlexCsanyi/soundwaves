@@ -53,7 +53,12 @@ $(document).ready(function() {
       url: "webservices/register.php",
       data: $("#register_form").serialize(),
       success: function(result) {
-        alert(result);
+        if (result.status == "fail") {
+          $("#email_error").html("Email already exists");
+          $("#email_error").css("color", "red");
+        } else if (result.status == "success") {
+          $("#success_msg").html("Verify your email");
+        }
       }
     });
   });

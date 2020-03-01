@@ -78,6 +78,7 @@
         </div>
       </div>
       <div class="modal-footer">
+        <p class="float-left" id="success_msg"></p>
         <button type="button" class="btn btn-primary" id="verify_ajax">Sign up</button>
         <button class="btn btn-success" type="button" disabled id="spinner">
             <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
