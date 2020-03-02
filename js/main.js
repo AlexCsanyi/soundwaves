@@ -55,10 +55,15 @@ $(document).ready(function() {
           if (result.status == "fail") {
             $("#email_error").html("Email already exists");
             $("#email_error").css("color", "red");
+            $("#verify_ajax").show();
+            $("#spinner").hide();
+            console.log(result.status);
           } else if (result.status == "success") {
+            console.log(result.status);
             $("#success_msg").html("Verify your email");
-          } else {
-            console.log("not working");
+            $("#register_form")[0].reset();
+            $("#verify_ajax").show();
+            $("#spinner").hide();
           }
         }
       });

@@ -17,7 +17,6 @@
         
         if($sql_insert){
             $response_array['status'] = "success";
-            echo "New record created successfully";
         } else {
             echo "Error: " . $sql_insert . "" . mysqli_error($con);
         };
