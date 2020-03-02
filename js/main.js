@@ -1,6 +1,10 @@
 $(document).ready(function() {
   $("#modal_close").on("click", function() {
     $("#success_msg").hide();
+    $("#register_form")[0].reset();
+    $("#email_error").hide();
+    $("#name_error").hide();
+    $("#password_error").hide();
   });
 
   // Hide spinner by default
