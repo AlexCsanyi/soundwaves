@@ -33,7 +33,7 @@
                     class="float-right mt-2 text-muted text-decoration-none" 
                     href="javascript:void(0)"
                     data-toggle="modal" data-target="#forgotPassword">
-                        Forgot password?
+                      Forgot password?
                 </a>
             </span>
         </div>
@@ -48,7 +48,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="signUpToSoundWaves">Welcome to SoundWaves</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="modal_close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>

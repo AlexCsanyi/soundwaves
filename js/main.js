@@ -1,4 +1,8 @@
 $(document).ready(function() {
+  $("#modal_close").on("click", function() {
+    $("#success_msg").hide();
+  });
+
   // Hide spinner by default
   $("#spinner").hide();
 
@@ -57,10 +61,10 @@ $(document).ready(function() {
             $("#email_error").css("color", "red");
             $("#verify_ajax").show();
             $("#spinner").hide();
-            console.log(result.status);
           } else if (result.status == "success") {
-            console.log(result.status);
-            $("#success_msg").html("Verify your email");
+            $("#success_msg").html(
+              "Dear " + name + " Please confrim your email"
+            );
             $("#register_form")[0].reset();
             $("#verify_ajax").show();
             $("#spinner").hide();
