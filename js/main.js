@@ -46,20 +46,22 @@ $(document).ready(function() {
       $("#password_error").html("");
       $("#verify_ajax").hide();
       $("#spinner").show();
-    }
 
-    $.ajax({
-      type: "POST",
-      url: "webservices/register.php",
-      data: $("#register_form").serialize(),
-      success: function(result) {
-        if (result.status == "fail") {
-          $("#email_error").html("Email already exists");
-          $("#email_error").css("color", "red");
-        } else if (result.status == "success") {
-          $("#success_msg").html("Verify your email");
+      $.ajax({
+        type: "POST",
+        url: "webservices/register.php",
+        data: $("#register_form").serialize(),
+        success: function(result) {
+          if (result.status == "fail") {
+            $("#email_error").html("Email already exists");
+            $("#email_error").css("color", "red");
+          } else if (result.status == "success") {
+            $("#success_msg").html("Verify your email");
+          } else {
+            console.log("not working");
+          }
         }
-      }
-    });
+      });
+    }
   });
 });
