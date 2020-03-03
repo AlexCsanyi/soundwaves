@@ -67,7 +67,9 @@ $(document).ready(function() {
             $("#spinner").hide();
           } else if (result.status == "success") {
             $("#success_msg").html(
-              "Dear " + name + " Please confrim your email"
+              "Dear " +
+                name +
+                ", an email has been sent, please click the link to confirm your email."
             );
             $("#register_form")[0].reset();
             $("#verify_ajax").show();
