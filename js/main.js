@@ -72,6 +72,12 @@ $(document).ready(function() {
             $("#register_form")[0].reset();
             $("#verify_ajax").show();
             $("#spinner").hide();
+          } else if (result.status == "mail_failed") {
+            $("#success_msg").html(
+              "Failed sending message to the email provided."
+            );
+            $("#verify_ajax").show();
+            $("#spinner").hide();
           }
         }
       });
