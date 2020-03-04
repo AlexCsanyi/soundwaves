@@ -101,7 +101,7 @@
       </div>
       <div class="modal-body">
         <div class="container">
-            <form>
+            <form id="forgot_password_form">
                 <div id="verify_email_field" class="form-group">
                     <label for="input_email_verification">Email address</label>
                     <input type="email" class="form-control" id="input_email_verification" aria-describedby="emailHelp" name="input_email_verification">
@@ -115,6 +115,7 @@
         </div>
       </div>
       <div class="modal-footer">
+        <p class="float-left" id="verifiction_msg"></p>
         <button type="button" class="btn btn-primary" id="verify_email_btn">Verify email</button>
         <button type="button" class="btn btn-primary" id="reset_password_btn">Reset Password</button>
       </div>

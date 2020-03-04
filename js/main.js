@@ -107,7 +107,21 @@ $(document).ready(function() {
       $("#email_verification_error").css("color", "red");
       return false;
     } else {
-      $("#email_verification_error").html("");
+      $.ajax({
+        type: "POST",
+        url: "webservices/verify_email.php",
+        data: $("#forgot_password_form").serialize(),
+        success: function(result) {
+          if (result.status == "success") {
+            $("#verify_email_btn").hide();
+            $("#new_pass_field").show(500);
+            $("#reset_password_btn").show();
+          } else if (result.status == "fail") {
+            $("#verifiction_msg").html("Email does not exist");
+            $("#verifiction_msg").css("color", "red");
+          }
+        }
+      });
     }
   });
 });
