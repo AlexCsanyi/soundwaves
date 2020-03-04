@@ -7,6 +7,12 @@ $(document).ready(function() {
     $("#password_error").hide();
   });
 
+  // Hide new password field by default
+  $("#reset_password_btn").hide();
+
+  // Hide new password field by default
+  $("#new_pass_field").hide();
+
   // Hide spinner by default
   $("#spinner").hide();
 

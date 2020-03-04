@@ -106,7 +106,7 @@
                     <label for="InputEmail2">Email address</label>
                     <input type="email" class="form-control" id="InputEmail2" aria-describedby="emailHelp">
                 </div>
-                <div class="form-group">
+                <div id="new_pass_field" class="form-group">
                     <label for="InputNewPassword">New Password</label>
                     <input type="password" class="form-control" id="InputNewPassword">
                 </div>
@@ -114,7 +114,8 @@
         </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary">Reset Password</button>
+        <button type="button" class="btn btn-primary" id="verify_email_btn">Verify email</button>
+        <button type="button" class="btn btn-primary" id="reset_password_btn">Reset Password</button>
       </div>
     </div>
   </div>
