@@ -102,9 +102,10 @@
       <div class="modal-body">
         <div class="container">
             <form>
-                <div class="form-group">
-                    <label for="InputEmail2">Email address</label>
-                    <input type="email" class="form-control" id="InputEmail2" aria-describedby="emailHelp">
+                <div id="verify_email_field" class="form-group">
+                    <label for="input_email_verification">Email address</label>
+                    <input type="email" class="form-control" id="input_email_verification" aria-describedby="emailHelp" name="input_email_verification">
+                    <span id="email_verification_error"></span>
                 </div>
                 <div id="new_pass_field" class="form-group">
                     <label for="InputNewPassword">New Password</label>
