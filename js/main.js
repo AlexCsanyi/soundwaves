@@ -114,6 +114,7 @@ $(document).ready(function() {
         success: function(result) {
           if (result.status == "success") {
             $("#verify_email_btn").hide();
+            $("#verifiction_msg").hide();
             $("#new_pass_field").show(500);
             $("#reset_password_btn").show();
           } else if (result.status == "fail") {
@@ -124,4 +125,8 @@ $(document).ready(function() {
       });
     }
   });
+
+  // ------------------ VERIFY NEW PASSWORD
+
+  $("#reset_password_btn").on("click", function() {});
 });
