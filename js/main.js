@@ -114,7 +114,7 @@ $(document).ready(function() {
         success: function(result) {
           if (result.status == "success") {
             $("#verify_email_btn").hide();
-            $("#verifiction_msg").hide();
+            $("#verifiction_msg").html("");
             $("#new_pass_field").show(500);
             $("#reset_password_btn").show();
           } else if (result.status == "fail") {
@@ -128,5 +128,44 @@ $(document).ready(function() {
 
   // ------------------ VERIFY NEW PASSWORD
 
-  $("#reset_password_btn").on("click", function() {});
+  $("#reset_password_btn").on("click", function() {
+    var input_email_verification = $("#input_email_verification").val();
+    var verify_email = /^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+
+    if (input_email_verification == "") {
+      $("#email_verification_error").html("Email is required");
+      $("#email_verification_error").css("color", "red");
+      return false;
+    } else if (!input_email_verification.match(verify_email)) {
+      $("#email_verification_error").html("Enter valid email");
+      $("#email_verification_error").css("color", "red");
+      return false;
+    } else {
+      $("#email_verification_error").hide();
+    }
+
+    var new_password = $("#new_password_input").val();
+
+    if (new_password == "") {
+      $("#new_pass_verification_error").html("Password is required");
+      $("#new_pass_verification_error").css("color", "red");
+      return false;
+    } else {
+      $("#new_pass_verification_error").hide();
+      $.ajax({
+        type: "POST",
+        url: "webservices/update_password.php",
+        data: $("#forgot_password_form").serialize(),
+        success: function(result) {
+          if (result.status == "success") {
+            $("#verifiction_msg").html("Password updated successfully");
+            $("#verifiction_msg").css("color", "green");
+          } else if (result.status == "fail") {
+            $("#verifiction_msg").html("Password not updated, try again");
+            $("#verifiction_msg").css("color", "red");
+          }
+        }
+      });
+    }
+  });
 });

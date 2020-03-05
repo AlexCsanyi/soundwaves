@@ -108,8 +108,9 @@
                     <span id="email_verification_error"></span>
                 </div>
                 <div id="new_pass_field" class="form-group">
-                    <label for="InputNewPassword">New Password</label>
-                    <input type="password" class="form-control" id="InputNewPassword">
+                    <label for="new_password_input">New Password</label>
+                    <input type="password" class="form-control" id="new_password_input" name="new_password_input">
+                    <span id="new_pass_verification_error"></span>
                 </div>
             </form>
         </div>
